@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
     <h1>Hey guys</h1>
     <p>{{myObject.location}}</p>
     <ul>
-      <li *ngFor="let arr of myArr">{{arr}}</li>
+      <li *ngFor="let arr of myArr">This is an for each {{arr}}</li>
+      <li *ngIf="myArr">If (ngIF) ....Yes, I exist.</li>
     </ul>
   `,
   styleUrls: ['./app.component.css']
