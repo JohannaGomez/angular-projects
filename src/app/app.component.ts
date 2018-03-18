@@ -7,11 +7,11 @@ import { Component } from '@angular/core';
     <img src="{{angularLogo}}">
     <img [src]="angularLogo">
     <img bind-src="angularLogo">
-    <button [disabled]="buttonStatus">My Button</button>
+    <button [disabled]="buttonStatus =='enabled'">My Button</button>
   `,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   angularLogo = 'https://angular.io/resources/images/logos/angular2/angular.png';
-  buttonStatus = false;
+  buttonStatus = 'enabled';
 }
