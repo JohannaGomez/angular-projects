@@ -3,13 +3,15 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <h1>Hey guys</h1>
-    <div><li *ngIf="myArr; then tmpl1 else tmpl2"></li></div>
-    <ng-template #tmpl1>Truth</ng-template>
-    <ng-template #tmpl2>False</ng-template>
+    <h1>Property binding: interpolation (value is a string), wrapping, reappend bind- behind the element attribute</h1>
+    <img src="{{angularLogo}}">
+    <img [src]="angularLogo">
+    <img bind-src="angularLogo">
+    <button [disabled]="buttonStatus">My Button</button>
   `,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  myArr = true;
+  angularLogo = 'https://angular.io/resources/images/logos/angular2/angular.png';
+  buttonStatus = false;
 }
